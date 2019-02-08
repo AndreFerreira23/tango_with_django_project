@@ -4,12 +4,15 @@ from rango.models import Category
 from rango.models import Page
 from rango.forms import CategoryForm
 from rango.forms import PageForm
+<<<<<<< HEAD
 from rango.forms import UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 
 def index(request):
 
@@ -43,7 +46,10 @@ def show_category(request, category_name_slug):
 
     return render(request, 'rango/category.html', context_dict)
 
+<<<<<<< HEAD
 @login_required
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 def add_category(request):
     form = CategoryForm()
     # A HTTP POST?
@@ -67,7 +73,10 @@ def add_category(request):
     return render(request, 'rango/add_category.html', {'form': form})
 
 
+<<<<<<< HEAD
 @login_required
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
@@ -88,6 +97,7 @@ def add_page(request, category_name_slug):
             print(form.errors)
     context_dict = {'form':form, 'category': category}
     return render(request, 'rango/add_page.html', context_dict)
+<<<<<<< HEAD
 
 def register(request):
     registered = False
@@ -151,4 +161,6 @@ def restricted(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 

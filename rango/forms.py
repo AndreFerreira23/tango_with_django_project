@@ -1,8 +1,11 @@
 from django import forms
 from rango.models import Page, Category
+<<<<<<< HEAD
 from django import forms
 from django.contrib.auth.models import User
 from rango.models import Category, Page, UserProfile
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 
 class CategoryForm(forms.ModelForm):
     name = forms.CharField(max_length=128,help_text="Please enter the category name.")
@@ -47,6 +50,7 @@ class PageForm(forms.ModelForm):
         exclude = ('category',)
         #or specify the fields to include (i.e. not include the category field)
         #fields = ('title', 'url', 'views')
+<<<<<<< HEAD
 
 
 class UserForm(forms.ModelForm):
@@ -59,3 +63,5 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('website', 'picture')
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0

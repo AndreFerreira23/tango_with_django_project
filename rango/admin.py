@@ -11,4 +11,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Page, PageAdmin)
+<<<<<<< HEAD
 admin.site.register(UserProfile)
+=======
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0

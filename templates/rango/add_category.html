@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
@@ -20,4 +24,36 @@
 	            	<input type="submit" name="submit" value="Create Category" />
 	        </form>
 		</div>
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rango</title>
+	</head>
+	    
+	<body>
+		<h1>Add a Category</h1>
+		<div>
+	        
+			<form id="category_form" method="post" action="/rango/add_category/">
+	            
+				{% csrf_token %}
+				{% for hidden in form.hidden_fields %}
+	                		{{ hidden }}
+				{% endfor %}
+				{% for field in form.visible_fields %}
+					{{ field.errors }}
+					{{ field.help_text }}
+	                		{{ field }}
+				{% endfor %}
+	            		<input type="submit" name="submit" value="Create Category" />
+	        	</form>
+		</div>	
+	</body>
+</html>
+>>>>>>> f87a6c8fd51ab3f6e980783dcc0dd6275cb68b6e
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0

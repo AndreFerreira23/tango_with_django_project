@@ -25,6 +25,7 @@
 	<hr />
 	<div>
 		<ul>
+<<<<<<< HEAD
 			{% if user.is_authenticated %}
 				<li><a href="{% url 'restricted' %}">Restricted Page</a></li>
 				<li><a href="{% url 'logout' %}">Logout</a></li>
@@ -37,6 +38,11 @@
 			<li><a href="{% url 'index' %}">Index</a></li>
 			<li><a href="{% url 'register' %}">Sign Up</a></li>
 			<li><a href="{% url 'login' %}">Login</a><li>		
+=======
+			<li><a href="{% url 'add_category' %}">Add a New Category</a></li>
+			<li><a href="{% url 'about' %}">About</a></li>	
+			<li><a href="{% url 'index' %}">Index</a></li>		
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 		</ul>
 	</div>
 </body>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 {% block title_block %}
@@ -23,12 +27,48 @@
 	        {{ field }}
 	{% endfor %}
 	<input type="submit" name="submit" value="Add Page" />
+<<<<<<< HEAD
+=======
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Rango - Add Page</title>
+    </head>
+    <body>
+            {% if category %}
+			
+	<h1>Add a Page to {{category.name}}</h1>
+	<form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
+            {% csrf_token %}
+	    {% for hidden in form.hidden_fields %}
+	        {{ hidden }}
+	    {% endfor %}
+	    {% for field in form.visible_fields %}
+	        {{ field.errors }}
+	        {{ field.help_text }}
+	        {{ field }}
+	    {% endfor %}
+	    <input type="submit" name="submit" value="Add Page" />
+>>>>>>> f87a6c8fd51ab3f6e980783dcc0dd6275cb68b6e
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
 	</form>
 			
 		{% else %}
                     The specified category does not exist!
 		{% endif%}
 			
+<<<<<<< HEAD
 		</div>
 {% endblock %}
 
+=======
+<<<<<<< HEAD
+		</div>
+{% endblock %}
+
+=======
+    </body>
+</html>
+>>>>>>> f87a6c8fd51ab3f6e980783dcc0dd6275cb68b6e
+>>>>>>> 8d8518b9ba9a577219f0fa1b870c0ce9f85856a0
